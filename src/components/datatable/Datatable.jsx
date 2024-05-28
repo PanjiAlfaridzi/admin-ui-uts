@@ -43,7 +43,7 @@ const actionColumn = [
       return (
         <div className="cellAction">
           <Link to="/users/test" style={{ textDecoration: "none" }}>
-            <span className="viewButton">View</span>
+          <span className="viewButton">View</span>
           </Link>
         </div>
       );
@@ -60,7 +60,7 @@ const Datatable = () => {
           Add New
         </Link>
       </div>
-      <DataGrid className="datagrid" 
+      <DataGrid className="datagrid"
         rows={rows}
         columns={columns.concat(actionColumn)}
         initialState={{

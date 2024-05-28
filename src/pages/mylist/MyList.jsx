@@ -1,7 +1,7 @@
 import "./mylist.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import MyDatatable from "../../components/mydatatable/MyDatatable";
+import MyDatatable from "../../components/mydatatable/Mydatatable";
 import Widget from "../../components/widget/Widget";
 
 const MyList = () => {
@@ -13,8 +13,6 @@ const MyList = () => {
         <div className="widgets">
           <Widget type="user" />
           <Widget type="order" />
-          <Widget type="earning" />
-          <Widget type="earning" />
         </div>
         <div className="table">
           <MyDatatable title="All Data" />

@@ -1,8 +1,12 @@
 import "./navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -12,11 +16,12 @@ const Navbar = () => {
         </div>
         <div className="items">
           <div className="item">
-            <DarkModeOutlinedIcon className="icon" />
+            <DarkModeOutlinedIcon className="icon" 
+            onClick={() => dispatch({ type: "TOGGLE"})} />
           </div>
           <div className="item">
             <img
-              src="https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://media.licdn.com/dms/image/D5603AQFAsrNl_zcjag/profile-displayphoto-shrink_400_400/0/1713614299789?e=1720656000&v=beta&t=IgApHzyvSihU3HVX7aibbPfz_SEWvF0teswawxwmgHs"
               alt=""
               className="avatar"
             />
